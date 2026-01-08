@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
+import CookieBanner from '@/components/CookieBanner';
 
 const Index = () => {
   const [weather, setWeather] = useState({
@@ -41,8 +42,10 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#8B5CF6] via-[#7C3AED] to-[#0EA5E9] flex items-center justify-center p-4">
-      <div className={`w-full max-w-md transition-all duration-700 ${mounted ? 'animate-fade-in' : 'opacity-0'}`}>
+    <>
+      <CookieBanner />
+      <div className="min-h-screen bg-gradient-to-br from-[#8B5CF6] via-[#7C3AED] to-[#0EA5E9] flex items-center justify-center p-4">
+        <div className={`w-full max-w-md transition-all duration-700 ${mounted ? 'animate-fade-in' : 'opacity-0'}`}>
         <div className="text-center mb-8">
           <h1 className="text-5xl font-bold text-white mb-2 drop-shadow-lg">
             Воротынск
@@ -109,7 +112,7 @@ const Index = () => {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
